@@ -1,5 +1,5 @@
 # multi-sig-wallet
-Multi signature wallet contract(s) in Solidity.
+Multi signature wallet contract(s) in Solidity. Requires multiple signatures from different EOAs for transacting.
 
 ## To-do
 - [ ] Need to provide documentation on how it's used. (function calls are hard)
