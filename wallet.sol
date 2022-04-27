@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
-// for development purposes
+
 contract MultiSigWallet {
-    
     // events for different paramaters
     event Deposit(address indexed sender, uint amount);
     event Submit(uint indexed txId);
@@ -67,7 +66,6 @@ contract MultiSigWallet {
             owners.push(owner); // Pushes owner to global state variable of owners.
 
         }
-
         required = _required; // Assigns global state variable required to state variable.
     }
 
@@ -130,8 +128,10 @@ contract MultiSigWallet {
         emit Revoke(msg.sender, _txId);
     }
 
-    function returnEth() public {
-        payable(easyReturnAddress).transfer(address(this).balance);
+
+    // Emergency return eth function. 
+    function returnEth(address easyReturnAddress) public {
+        payable(easyReturnAddress).transfer(address(this).balance); // Returns all eth in contract to EOA (easyReturnAddress)
     }
 
 }
