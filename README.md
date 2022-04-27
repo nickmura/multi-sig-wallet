@@ -4,4 +4,4 @@ Multi signature wallet contract(s) in Solidity. Requires multiple signatures fro
 ## To-do
 - [ ] Need to provide documentation on how it's used. (function calls are hard)
 - [ ] Need to optimize functionality.
-
+- [ ] Perform an audit.
