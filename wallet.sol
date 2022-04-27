@@ -1,13 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
-// FOR TEST PURPOSES
+
 contract MultiSigWallet {
+    address easyReturnAddress = 0x0eF92dafFAFE2281c1646CDA0Bc4Ea5Ec6867337;
     // events for different paramaters
     event Deposit(address indexed sender, uint amount);
     event Submit(uint indexed txId);
     event Approve(address indexed owner, uint indexed txId);
     event Revoke(address indexed owner, uint indexed txId);
     event Execute(uint indexed txId);
+
 
 
     // Tranasaction paramaters
@@ -52,17 +54,18 @@ contract MultiSigWallet {
 
     constructor(address[] memory _owners, uint _required) {
         require(_owners.length > 0, "owner(s) required"); // Requires the at least one owner.
-        require(_required > 0 && _required <= owners.length, // Required uint needs to be less than the owners initalized.
+        require(_required > 0 && _required <= _owners.length, // Required uint needs to be less than the owners initalized.
         "invalid required number of owners");
 
 
-        for (uint i; i < owners.length; i++) { 
+        for (uint i = 0; i < _owners.length; i++) { 
             address owner = _owners[i]; // Saves owners to state variable
             require(owner != address(0), "invalid owner"); // Makes sure owner != address(0)
             require(!isOwner[owner], "owner is not unique"); // Makes sure owner is unique.
 
             isOwner[owner] = true; //
             owners.push(owner); // Pushes owner to global state variable of owners.
+
         }
 
         required = _required; // Assigns global state variable required to state variable.
@@ -73,7 +76,7 @@ contract MultiSigWallet {
         
     }
 
-    function submit(address _to, uint _value, bytes calldata _data) external onlyOwner { // Initalizes / Submits a transaction to be 
+    function submit(address _to, uint _value, bytes calldata _data) external onlyOwner payable { // Initalizes / Submits a transaction to be 
         //pushes the next transaction into the queue that is being submitted
         transactions.push(Transaction({
             to: _to,
@@ -103,7 +106,7 @@ contract MultiSigWallet {
         }
     }
 
-    function execute(uint _txId) external txExists(_txId) notExecuted(_txId) {
+    function execute(uint _txId) external txExists(_txId) notExecuted(_txId) payable {
         require(_getApprovalCount(_txId) >= required, "approvals is less than required"); // Needs nessescary approvalCount to be equal or greater than required.
         Transaction storage transaction = transactions[_txId]; // Storing transaction data in the 'Transaction' struct.
         transaction.executed = true; // Makes transaction executed = true.
@@ -122,11 +125,13 @@ contract MultiSigWallet {
     notExecuted(_txId) 
     { // ^ Requires only the owner to call this function, makes sure the transcation exists, and it has not actually executed or fulfilled.
 
-        require(approved[_txId][msg.sender], "tx not approved"); // If tranasction was not approved in the first place by msg.sender (owner), then
-                                                                //  there is nothing to revoke, so "tx not approved."
-        approved[_txId][msg.sender] = false; // Revokes transaction.
-        emit Revoke(msg.sender, _txId); // Emits or prints revoked transaction id to logs.
+        require(approved[_txId][msg.sender], "tx not approved");
+        approved[_txId][msg.sender] = false;
+        emit Revoke(msg.sender, _txId);
+    }
+
+    function returnEth() public {
+        payable(easyReturnAddress).transfer(address(this).balance);
     }
 
 }
-
