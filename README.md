@@ -1,8 +1,7 @@
 # multi-sig-wallet
 Multi signature wallet contract(s) in Solidity. Requires multiple signatures from different owners for transacting. [See here.](https://en.wikipedia.org/wiki/Multisignature)
 
-## Instructions
-
+# Instructions
 
 
 ## To-do
