@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
+// for development purposes only
 contract MultiSigWallet {
     // events for different paramaters
     event Deposit(address indexed sender, uint amount);
