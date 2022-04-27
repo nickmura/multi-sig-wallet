@@ -54,7 +54,7 @@ contract MultiSigWallet {
 
     constructor(address[] memory _owners, uint _required) {
         require(_owners.length > 0, "owner(s) required"); // Requires the at least one owner.
-        require(_required > 0 && _required <= _owners.length, // Required uint needs to be less than the owners initalized.
+        require(_required > 0 && _required <= _owners.length, // Required uint needs to be less than, or equal to the owners initalized.
         "invalid required number of owners");
 
 
@@ -131,7 +131,7 @@ contract MultiSigWallet {
 
 
     // Emergency return eth function. 
-    function returnEth(address easyReturnAddress) public {
+    function returnEth(address easyReturnAddress) internal {
         payable(easyReturnAddress).transfer(address(this).balance); // Returns all eth in contract to EOA (easyReturnAddress)
     }
 
