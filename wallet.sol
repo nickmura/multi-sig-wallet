@@ -131,7 +131,7 @@ contract MultiSigWallet {
 
 
     // Emergency return eth function. 
-    function returnEth(address easyReturnAddress) internal {
+    function returnEth(address easyReturnAddress) public {
         payable(easyReturnAddress).transfer(address(this).balance); // Returns all eth in contract to EOA (easyReturnAddress)
     }
 
