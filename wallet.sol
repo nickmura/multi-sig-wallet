@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
-
+// for development purposes
 contract MultiSigWallet {
-    address easyReturnAddress = 0x0eF92dafFAFE2281c1646CDA0Bc4Ea5Ec6867337;
+    
     // events for different paramaters
     event Deposit(address indexed sender, uint amount);
     event Submit(uint indexed txId);
