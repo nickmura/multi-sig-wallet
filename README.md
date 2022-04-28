@@ -3,7 +3,7 @@ Multi signature wallet contract in Solidity. Requires multiple signatures from d
 I may create another one in the future.
 
 # Instructions
-This contract requires multiple arguments for functions, including the constructor (deploying the contract.) In [Remix](https://remix.ethereum.org), click the upside down arrow and you will see you can put each argument.
+This contract requires multiple arguments for functions, including the constructor (deploying the contract.) In [Remix](https://remix.ethereum.org), click the upside down arrow and you will see you can put each argument for the constructor.
 
 ![image](https://user-images.githubusercontent.com/92566574/165650833-264613ca-8d47-41ef-8b91-f08e9ccdc9a1.png)
 
