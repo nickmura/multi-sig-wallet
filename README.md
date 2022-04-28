@@ -9,7 +9,7 @@ This contract requires multiple arguments for functions, including the construct
 
 
 
-Put your address in an array format with double quotes in the `_owners` argument, as shown in example below. ex. `["0x......address1", "0x......address2", 0x......address2"]`. `_required` is the nessescary approvals from owners / multi-signatures to execute a transaction. For instance, if you have 3 owners, you could have 2 or 3 required approvals to execute. Click 'transact' to deploy contract. Notice how I have no value being sent as I deploy this contract.
+Put your address in an array format with double quotes in the `_owners` argument, as shown in example below. ex. `["0x......address1", "0x......address2", 0x......address2"]`. `_required` is the nessescary approvals from owners / digital signatures to execute a transaction. For instance, if you have 3 owners, you could have 2 or 3 required approvals to execute. Click 'transact' to deploy contract. Notice how I have no value being sent as I deploy this contract.
 
 
 ![image](https://user-images.githubusercontent.com/92566574/165653161-e0658499-e4fc-4950-98ba-f8303efee224.png)
