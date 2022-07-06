@@ -1,0 +1,110 @@
+
+.head {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+}
+
+
+
+#connect-metamask {
+    margin: 0 auto;
+    margin-right: 1rem;
+}
+/* app */
+
+.app {
+    width: 480px;
+    max-width: 300px;
+    height: 600px;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 12px;
+    margin-left: 1rem;
+}
+
+/* submit form function call */ 
+#submitTransForm {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    justify-content: center;
+}
+.labelinput label {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.line {
+    width: 280px;
+}
+
+/* approve form function call */
+
+.approve {
+    margin-left: 1rem;
+}
+#txidapprove {
+    width: 60px;
+    margin-left: 1rem;
+}
+
+.approvebtn {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+/* revoke form function call */
+.revoke {
+    margin-left: 1rem;
+}
+
+#txidrevoke {
+    width: 60px;
+    margin-left: 1rem;
+}
+
+#revoke {
+    margin-top: 1rem;
+}
+/* execute form function call */
+
+.execute {
+    margin-left: 1rem;
+}
+
+#txidexecute {
+    width: 60px;
+    margin-left: 1rem;
+}
+#execute {
+    margin-top: 1rem;
+}
+
+.txinfo-r {
+    color: red;
+}
+
+.txinfo-g {
+    color: green;
+}
+#txcheck {
+    display: block;
+    height: 20px;
+    margin-top: 0.75rem;
+    margin-left: 1rem;
+    margin-bottom: -0.25rem;
+}
+
+
+#txlog {
+    margin-top: -0.5rem;
+    margin-right: 1rem;
+    color: rgb(80, 80, 80);
+    display: flex;
+    justify-content: flex-end;
+}
