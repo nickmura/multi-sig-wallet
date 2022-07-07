@@ -60,8 +60,12 @@ If you have followed the steps above, you have successfully created a transactio
 - [x] Need to provide instructions on how it's used. (function calls are hard)
 - [x] Need to optimize functionality of contract.
 - [x] Working on front-end interaction of multi-sig.
-- [x] Finished and published front-end interaction of multi-sig.
+- [x] Finished a rough version of front-end interaction of multi-sig.
 - [ ] Need to reformat and make mobile friendly UI.
 - [ ] Reformat in Svelte.
+- [ ] Create new UI that is much better.
 - [ ] Optimized to a good deal.
-- [ ] Perform an audit.
+- [ ] Create instances (allow users to deploy their own multi-sig
+- [ ] Successfully submit and publish a polished verison.
+- [ ] Showcase and tell people
+- [x] Perform an audit.
