@@ -61,5 +61,7 @@ If you have followed the steps above, you have successfully created a transactio
 - [x] Need to optimize functionality of contract.
 - [x] Working on front-end interaction of multi-sig.
 - [x] Finished and published front-end interaction of multi-sig.
+- [ ] Need to reformat and make mobile friendly UI.
+- [ ] Reformat in Svelte.
 - [ ] Optimized to a good deal.
 - [ ] Perform an audit.
