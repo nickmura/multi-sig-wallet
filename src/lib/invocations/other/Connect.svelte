@@ -14,7 +14,7 @@
 	import { contractAddress, contractABI } from '../../abis/contracts/contractABI'
     import Factory from '../../abis/contracts/ContractFactory.svelte'
 	import { selectedOption, transactionID, awaitingTx, errorHandling, connectedAddress } from '../../stores/stores'
-    
+
     let isExpanded = false;
     
     function clickHandler() {
@@ -33,7 +33,7 @@
     <button id='connect-metamask' on:click={connectMetamask} type="submit" class="relative max-w-[10rem]  py-2 px-4 flex items-end border border-transparent 
     text-sm font-medium rounded-md text-white pl-10 ml-2 bg-indigo-600 hover:bg-indigo-700">
       <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-        <img src='https://raw.githubusercontent.com/nickmura/multi-sig-wallet/main/img/metamask-logo-black-and-white.png' class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" alt='metamask image' aria-hidden="true">
+        <img src='../../../../static/metamask-logo-black-and-white.png' class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" alt='metamask image' aria-hidden="true">
       </span>
         Connect wallet
     </button>
