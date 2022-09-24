@@ -75,7 +75,7 @@
 	  <div class="flex mx-auto w-full justify-center py-10 px-4 h-2/4 -mb-3">
 		<div class="max-w-md w-full space-y-8 ">
 		  <div>
-			<img src='../../../../static/multisig-logo.png' class="mx-auto h-12 w-auto" alt="logo">
+			<img src='./multisig-logo.png' class="mx-auto h-12 w-auto" alt="logo">
 			<h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">multi-sig.wallet</h2>
 			<!--{#if $selectedOption === 'Submit' || $selectedOption === 's' || data === 'Submit'} Submit invocation error handling and successful transaction messages-->
 			<!--{/if}-->
