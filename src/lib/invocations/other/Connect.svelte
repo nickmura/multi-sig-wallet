@@ -29,7 +29,7 @@
 
     {#if !$connected}
 
-    <div class='max-w-max  '>
+    <div class='max-w-max'>
     <button id='connect-metamask' on:click={connectMetamask} type="submit" class="relative max-w-[10rem]  py-2 px-4 flex items-end border border-transparent 
     text-sm font-medium rounded-md text-white pl-10 ml-2 bg-indigo-600 hover:bg-indigo-700">
       <span class="absolute left-0 inset-y-0 flex items-center pl-3">
