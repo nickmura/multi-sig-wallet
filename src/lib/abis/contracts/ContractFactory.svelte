@@ -16,6 +16,8 @@ import { slide } from 'svelte/transition'
 import { theme } from '../../stores/nightmode'
 import { contractAddress, contractABI, contractBytecode } from './contractABI'
 
+
+
 let provider
 let signer
 
@@ -103,7 +105,12 @@ async function contractFactory() {
             .catch(err => console.error(err))
     }
     async function callContract() {
-
+        cAddressInfo.push(contractAddressInput)
+        cAddressInfo.push('Unknown')
+        cAddressInfo.push('Unknown')
+        localStorage.setItem('contractAddress', JSON.stringify(cAddressInfo))
+        //console.log('Called contract')
+        console.log(localStorage.getItem('contractAddress'))
     }
 
 
@@ -112,13 +119,13 @@ async function contractFactory() {
 
 
 <main>
-        {#if connected} <!-- Add margin 2 for smaller screens maybe ? Fuck-->
+        {#if connected} <!-- Add margin 2 for smaller screens maybe ? Fuck -->
         <button class=" relative max-w-[15rem] ml-2 py-2 px-4 border border-dotted border-transparent 
         text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-600 dark:hover:bg-indigo-700" on:click={clickHandler}>
             Create/connect to a wallet
         </button>
         {#if isExpanded}
-        <div class='absolute bg-white text-black rounded-sm max-w-[273px] max-h-2/4 z-20 dark:bg-zinc-700 border-2 dark:border-0 dark:border-zinc-700' transition:slide>
+        <div class='absolute bg-white text-black rounded-sm max-w-[273px] max-h-2/4 z-20 ml-1.5 dark:bg-zinc-700 border-2 dark:border-0 dark:border-zinc-700' transition:slide>
             <div class="rounded-md p-1 shadow-sm -space-y-px z-10 ">
                 {#if errorHandling != ''}
                 <div class='text-red-500 pb-2.5 pt-1' transition:slide>{errorHandling}</div>
@@ -210,7 +217,7 @@ async function contractFactory() {
                 </svg>
                     {#if connectWalletExpanded}
                         <div class='absolute font-xxs bg-white bottom text-white p-1 border-10 rounded-sm max-h-2/4 z-40 dark:border-zinc-700 dark:bg-zinc-700' transition:slide>
-                            Add the contract/wallet address in the input and click 'Connect to wallet' button. Once your wallet is connected, it will be stored in localStorage,
+                            Add the contract/wallet address in the input and click the 'Connect to wallet' button. Once your wallet is connected, it will be stored in localStorage,
                             and you can tell other owners to connect by providing them the contract address. 
                         
                         </div>
