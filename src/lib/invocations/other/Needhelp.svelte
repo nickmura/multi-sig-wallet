@@ -54,7 +54,7 @@
                     </p>
 
                     <div class="ml-64">
-                        <img src='https://raw.githubusercontent.com/nickmura/multi-sig-wallet/main/img/execute0.png' width="181" height="81.6" alt='Executing transaction demonstration'>
+                        <img src='../../../../static/submit0.png' width="181" height="81.6" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
@@ -67,7 +67,7 @@
                     </p>
 
                     <div class="ml-32 mt-7">
-                        <img src='https://raw.githubusercontent.com/nickmura/multi-sig-wallet/main/img/revoke0.png' width="196" height="88" alt='Executing transaction demonstration'>
+                        <img src='../../../../static/revoke0.png' width="196" height="88" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
@@ -81,7 +81,7 @@
                     </p>
 
                     <div class="ml-32 mt-8">
-                        <img src='https://raw.githubusercontent.com/nickmura/multi-sig-wallet/main/img/approve0.png' width="196" height="88" alt='Executing transaction demonstration'>
+                        <img src='../../../../static/approve0.png' width="196" height="88" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
@@ -95,7 +95,7 @@
                     </p>
 
                     <div class="flex ml-60 -mt-4">
-                        <img src='https://raw.githubusercontent.com/nickmura/multi-sig-wallet/main/img/submit0.png' width="196" height="88" alt='Executing transaction demonstration'>
+                        <img src='../../../../static/submit0.png' width="196" height="88" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
