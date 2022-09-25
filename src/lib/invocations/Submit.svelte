@@ -21,7 +21,7 @@
 	import Dropdown from './other/Dropdown.svelte'
 	import Guide  from './other/Needhelp.svelte'
 
-    import { contractAddress, contractABI } from '../../lib/abis/contracts/contractABI'
+    	import { contractAddress, contractABI } from '../../lib/abis/contracts/contractABI'
     
 	import { selectedOption, transactionID, awaitingTx, errorHandling } from '../../lib/stores/stores'
 
@@ -86,8 +86,8 @@
 
             awaitingTx.set(`<i style='text-green-500'>Transaction successfully submitted.</i> <a class='text-blue-400' href='http://goerli.etherscan.io/tx/${txSubmit.hash}' target='_blank'>Etherscan</a>`)
         } catch (error) {
-            console.log(error)
-            if (error.message.includes('User denied transaction signature.')) {
+            		console.log(error)
+            		if (error.message.includes('User denied transaction signature.')) {
 				errorHandling.set('')
 			}
 			// @ts-ignore
