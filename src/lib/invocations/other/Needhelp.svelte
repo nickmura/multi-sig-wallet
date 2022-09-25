@@ -54,7 +54,7 @@
                     </p>
 
                     <div class="ml-64">
-                        <img src='../../../../static/submit0.png' width="181" height="81.6" alt='Executing transaction demonstration'>
+                        <img src='./submit0.png' width="181" height="81.6" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
@@ -67,7 +67,7 @@
                     </p>
 
                     <div class="ml-32 mt-7">
-                        <img src='../../../../static/revoke0.png' width="196" height="88" alt='Executing transaction demonstration'>
+                        <img src='./revoke0.png' width="196" height="88" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
@@ -81,7 +81,7 @@
                     </p>
 
                     <div class="ml-32 mt-8">
-                        <img src='../../../../static/approve0.png' width="196" height="88" alt='Executing transaction demonstration'>
+                        <img src='./approve0.png' width="196" height="88" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
@@ -95,7 +95,7 @@
                     </p>
 
                     <div class="flex ml-60 -mt-4">
-                        <img src='../../../../static/submit0.png' width="196" height="88" alt='Executing transaction demonstration'>
+                        <img src='./submit0.png' width="196" height="88" alt='Executing transaction demonstration'>
                     </div>
                 </div>
                 {/if}
