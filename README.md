@@ -1,6 +1,6 @@
 # multi-sig-wallet
 Multi signature wallet contract in Solidity. Requires multiple signatures from different owners for transacting. [See here.](https://en.wikipedia.org/wiki/Multisignature)
-I may create another one in the future. [_Click here to see the frontend I'm working as of late (still in progress)._](https://nickmura.ca/multi-sig-wallet) which is currently going through a redesign in Svelte. 
+I may create another one in the future. [_Click here to see the frontend I've made.](https:/multisig.nickmura.ca/multi-sig-wallet) 
 
 # Instructions (pure contract invocation in Remix, solidity)
 This contract requires multiple arguments for functions, including the constructor (deploying the contract.) In [Remix](https://remix.ethereum.org), click the upside down arrow and you will see you can put each argument for the constructor.
