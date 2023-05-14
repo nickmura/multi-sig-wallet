@@ -6,3 +6,4 @@ node_modules
 .env
 .env.*
 /netlify
+package-lock.json
